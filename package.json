@@ -1,0 +1,19 @@
+{
+  "name": "hackygc",
+  "version": "1.0.0",
+  "description": "A hacky version of group chats for bluesky.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@atproto/api": "^0.15.8",
+    "@atproto/identity": "^0.4.8",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  }
+}
