@@ -27,4 +27,4 @@ Every 10 seconds, the script will:
 
 - There may be a >10 second latency before messages are forwarded.
 
-- This is a proof of concept hacked together in an afternoon. Script may be buggy, or may not scale well. Use at your own risk!
+- This is a proof-of-concept hacked together in an afternoon. Script may be buggy, or may not scale well. Use at your own risk!
