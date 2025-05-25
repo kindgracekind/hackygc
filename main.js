@@ -135,15 +135,15 @@ async function run() {
 }
 
 async function runLoop() {
-  // Run the loop every 10 seconds, ignore errors
+  // Run the loop every 5 seconds, ignore errors
   while (true) {
     try {
       await run();
     } catch (e) {
       console.error(e);
     } finally {
-      console.log("Waiting 10 seconds");
-      await wait(10000);
+      console.log("Waiting 5 seconds");
+      await wait(5000);
     }
   }
 }
