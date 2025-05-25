@@ -8,7 +8,7 @@ Here's what it looks like:
 
 ## Setup
 1. Create a new account for your group chat (make sure to verify the email)
-2. Chat membership is determined by active conversations within the bot account. To include a user in the group chat, simply send them a message from the bot account.
+2. Chat membership is determined by active conversations within the bot account. To include a user in the group chat, simply send them a message from the bot account manually.
 3. Create a .env file with the DID and PASSWORD of the GC account and run the node.js service on the server of your choice to sync messages between users
 
 And that's it!
