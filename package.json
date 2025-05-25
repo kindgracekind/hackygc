@@ -1,6 +1,6 @@
 {
   "name": "hackygc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A hacky version of group chats for bluesky.",
   "main": "main.js",
   "type": "module",

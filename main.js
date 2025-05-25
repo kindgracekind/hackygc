@@ -77,6 +77,9 @@ async function wait(ms) {
 async function getConversationMessages(convos) {
   const conversationMessages = [];
   for (const convo of convos) {
+    if (convo.status !== "accepted") {
+      continue; // don't sync until accepted
+    }
     const messages = (await bsky.getMessages(convo.id)).toSorted((a, b) => {
       return new Date(a.sentAt) - new Date(b.sentAt);
     });
@@ -107,10 +110,10 @@ async function syncMessages(conversationMessages) {
             if (
               new Date(message.sentAt) > new Date(Date.now() - 1 * 60 * 1000)
             ) {
-              await bsky.sendMessage(
-                conversationB.conversationId,
-                formattedMessage
-              );
+              // await bsky.sendMessage(
+              //   conversationB.conversationId,
+              //   formattedMessage
+              // );
               await wait(1000);
               // add in-place to the conversationB messages to avoid duplicates
               conversationB.messages.push({
