@@ -13,6 +13,8 @@ Here's what it looks like:
 
 And that's it!
 
+Note: Follower/following relationships for the bot account are unrelated to GC membership.
+
 ## Script details
 
 Every 10 seconds, the script will:
