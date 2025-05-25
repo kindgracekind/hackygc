@@ -17,7 +17,7 @@ And that's it!
 
 Every 10 seconds, the script will:
 1. Pull the last 50 messages for each conversation of the bot account
-2. For each conversation, if there is a user message that isn't present in other the conversations, send it to those users
+2. For each conversation, if there is a user message that isn't present in other the conversations, send it to the other users
 
 ## Limitations
 
