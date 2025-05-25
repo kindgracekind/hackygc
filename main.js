@@ -103,14 +103,15 @@ async function syncMessages(conversationMessages) {
           if (
             !conversationB.messages.some((m) => m.text === formattedMessage)
           ) {
-            // Don't send the message if it's > 5 mins old, that means something went wrong
+            // Don't send the message if it's > 1 min old, that means something went wrong
             if (
-              new Date(message.sentAt) > new Date(Date.now() - 5 * 60 * 1000)
+              new Date(message.sentAt) > new Date(Date.now() - 1 * 60 * 1000)
             ) {
               await bsky.sendMessage(
                 conversationB.conversationId,
                 formattedMessage
               );
+              await wait(1000);
               // add in-place to the conversationB messages to avoid duplicates
               conversationB.messages.push({
                 text: formattedMessage,
