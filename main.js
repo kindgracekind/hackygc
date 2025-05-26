@@ -118,6 +118,7 @@ async function syncMessages(conversationMessages) {
               // add in-place to the conversationB messages to avoid duplicates
               conversationB.messages.push({
                 text: formattedMessage,
+                sender: { did: DID },
               });
             }
           }
