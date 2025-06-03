@@ -93,9 +93,16 @@ async function getConversationMessages(convos) {
   return conversationMessages;
 }
 
+function truncate(str, maxLength) {
+  return str.length > maxLength ? str.substring(0, maxLength) + "..." : str;
+}
+
 async function syncMessages(conversationMessages) {
   for (const conversationA of conversationMessages) {
-    const userHandle = await bsky.didToHandle(conversationA.user.did);
+    const userHandle = truncate(
+      await bsky.didToHandle(conversationA.user.did),
+      30
+    );
     const userMessages = conversationA.messages.filter(
       (m) => m.sender?.did !== DID
     );
